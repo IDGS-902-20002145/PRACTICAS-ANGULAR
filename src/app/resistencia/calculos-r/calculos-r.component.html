@@ -1,0 +1,101 @@
+<h1 style="text-align:center;">Calculadora de resistencias</h1>
+<form novalidate style="text-align:center;">
+  <div>
+    <label for="colorBanda1">Color de la banda 1</label>
+    <select [(ngModel)]="colorBanda1" name="colorBanda1" id="colorBanda1">
+      <option value="0" [ngStyle]="{'background-color': getHexaColor('0')}">Negro</option>
+      <option value="1" [ngStyle]="{'background-color': getHexaColor('1')}">Marrón</option>
+      <option value="2" [ngStyle]="{'background-color': getHexaColor('2')}">Rojo</option>
+      <option value="3" [ngStyle]="{'background-color': getHexaColor('3')}">Naranja</option>
+      <option value="4" [ngStyle]="{'background-color': getHexaColor('4')}">Amarillo</option>
+      <option value="5" [ngStyle]="{'background-color': getHexaColor('5')}">Verde</option>
+      <option value="6" [ngStyle]="{'background-color': getHexaColor('6')}">Azul</option>
+      <option value="7" [ngStyle]="{'background-color': getHexaColor('7')}">Violeta</option>
+      <option value="8" [ngStyle]="{'background-color': getHexaColor('8')}">Gris</option>
+      <option value="9" [ngStyle]="{'background-color': getHexaColor('9')}">Blanco</option>
+    </select>
+  </div>
+  <br>
+  <div>
+    <label for="colorBanda2">Color de la banda 2</label>
+    <select [(ngModel)]="colorBanda2" name="colorBanda2" id="colorBanda2">
+      <option value="0" [ngStyle]="{'background-color': getHexaColor('0')}">Negro</option>
+      <option value="1" [ngStyle]="{'background-color': getHexaColor('1')}">Marrón</option>
+      <option value="2" [ngStyle]="{'background-color': getHexaColor('2')}">Rojo</option>
+      <option value="3" [ngStyle]="{'background-color': getHexaColor('3')}">Naranja</option>
+      <option value="4" [ngStyle]="{'background-color': getHexaColor('4')}">Amarillo</option>
+      <option value="5" [ngStyle]="{'background-color': getHexaColor('5')}">Verde</option>
+      <option value="6" [ngStyle]="{'background-color': getHexaColor('6')}">Azul</option>
+      <option value="7" [ngStyle]="{'background-color': getHexaColor('7')}">Violeta</option>
+      <option value="8" [ngStyle]="{'background-color': getHexaColor('8')}">Gris</option>
+      <option value="9" [ngStyle]="{'background-color': getHexaColor('9')}">Blanco</option>
+    </select>
+  </div>
+  <br>
+  <div>
+    <label for="colorMultiplicador">Multiplicador</label>
+    <select [(ngModel)]="colorMultiplicador" name="colorMultiplicador" id="colorMultiplicador" [style.background-color]="getHexaColor(colorMultiplicador)">
+      <option value="0" [ngStyle]="{'background-color': getHexaColor('0')}">Negro</option>
+      <option value="1" [ngStyle]="{'background-color': getHexaColor('1')}">Marrón</option>
+      <option value="2" [ngStyle]="{'background-color': getHexaColor('2')}">Rojo</option>
+      <option value="3" [ngStyle]="{'background-color': getHexaColor('3')}">Naranja</option>
+      <option value="4" [ngStyle]="{'background-color': getHexaColor('4')}">Amarillo</option>
+      <option value="5" [ngStyle]="{'background-color': getHexaColor('5')}">Verde</option>
+      <option value="6" [ngStyle]="{'background-color': getHexaColor('6')}">Azul</option>
+      <option value="7" [ngStyle]="{'background-color': getHexaColor('7')}">Violeta</option>
+      <option value="8" [ngStyle]="{'background-color': getHexaColor('8')}">Gris</option>
+      <option value="9" [ngStyle]="{'background-color': getHexaColor('9')}">Blanco</option>
+      <option value="10" [ngStyle]="{'background-color': '#FFD700'}">Oro</option>
+      <option value="11" [ngStyle]="{'background-color': '#C0C0C0'}">Plata</option>
+    </select>
+  </div>
+
+  <br>
+  <div>
+    <label>Tolerancia</label>
+    <div>
+      <label>
+        <input type="radio" name="colorTolerancia" [(ngModel)]="colorTolerancia" [value]="'oro'">
+        Oro
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio" name="colorTolerancia" [(ngModel)]="colorTolerancia" [value]="'plata'">
+        Plata
+      </label>
+    </div>
+  </div>
+
+  <br>
+  <button (click)="calcular()" class="btn btn-success"
+    style="background-color: greenyellow; border-color: greenyellow; border-radius: 5px;">Calcular</button>
+</form>
+
+<div>
+  <h2>Resultados</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Color de la banda 1</th>
+        <th>Color de la banda 2</th>
+        <th>Multiplicador</th>
+        <th>Tolerancia</th>
+        <th>Valor de la resistencia</th>
+        <td>Valor máximo:</td>
+        <td>Valor mínimo:</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td [style.backgroundColor]="hexaBanda1"></td>
+        <td [style.backgroundColor]="hexaBanda2"></td>
+        <td [style.backgroundColor]="hexaMultip"></td>
+        <td [style.backgroundColor]="hexaTolerancia"></td>
+        <td>{{valorResistencia}} Ω</td>
+        <td>{{max_valor}} Ω</td>
+        <td>{{min_valor}} Ω</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
