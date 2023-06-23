@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { VentasCComponent } from './ventas-c/ventas-c.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -9,7 +10,11 @@ import { VentasCComponent } from './ventas-c/ventas-c.component';
     VentasCComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
+  ],
+  exports: [
+    VentasCComponent
   ]
 })
 export class CinepolisModule { }
