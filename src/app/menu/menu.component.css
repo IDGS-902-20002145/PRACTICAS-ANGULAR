@@ -1,0 +1,23 @@
+.navbar {
+  background-color: #333; /* Cambia el color de fondo a gris */
+}
+
+.navbar-brand {
+  color: #fff; /* Cambia el color del texto del navbar a blanco */
+}
+
+.navbar-nav .nav-link {
+  color: #fff; /* Cambia el color del texto de los enlaces a blanco */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f8f9fa; /* Cambia el color del texto de los enlaces al pasar el mouse */
+}
+
+.navbar-toggler {
+  border-color: #fff; /* Cambia el color del botón del toggler a blanco */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* Cambia el color del icono del toggler a blanco */
+}

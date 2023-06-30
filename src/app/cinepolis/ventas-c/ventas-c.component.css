@@ -1,0 +1,32 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.actions-section {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-check {
+  margin-bottom: 5px;
+}
+
+.controls {
+  margin-top: 10px;
+}
+
+.btn {
+  margin-right: 10px;
+}

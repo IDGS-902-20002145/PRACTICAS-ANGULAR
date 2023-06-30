@@ -1,50 +1,44 @@
 <div class="container">
-  <div style="text-align: center;" id="tittle">
+  <div class="text-center">
     <h2>Cinepolis</h2>
   </div>
   <form (ngSubmit)="calcularDescuentos()">
-    <section id="section1">
-      <div class="control-group">
-        <div class="form-group">
-          <label for="nombre">Nombre</label>
-          <input type="text" class="form-control" id="nombre" [(ngModel)]="Nombre" name="nombre" required>
+    <section>
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" [(ngModel)]="Nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="cantidadC">Cantidad de Compradores</label>
+        <input type="number" class="form-control" id="cantidadC" [(ngModel)]="CantidadC" name="cantidadC" required>
+      </div>
+      <div class="form-group">
+        <label for="tarjeta">Tarjeta Cineco</label>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" [(ngModel)]="Tarjeta" name="tarjeta" value="S" required>
+            Si
+          </label>
         </div>
-        <div class="form-group">
-          <label for="cantidadC">Cantidad de Compradores</label>
-          <input type="number" class="form-control" id="cantidadC" [(ngModel)]="CantidadC" name="cantidadC"
-            required>
-        </div>
-        <div class="form-group">
-          <label for="tarjeta">Tarjeta Cineco</label>
-          <div class="radio">
-            <label>
-              <input type="radio" [(ngModel)]="Tarjeta" name="tarjeta" value="S" required>
-              Si
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" [(ngModel)]="Tarjeta" name="tarjeta" value="N" required>
-              No
-            </label>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="cantidadEnt">Cantidad de Entradas</label>
-          <input type="number" class="form-control" id="cantidadEnt" [(ngModel)]="CantidadEnt" name="cantidadEnt"
-            required>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" [(ngModel)]="Tarjeta" name="tarjeta" value="N" required>
+            No
+          </label>
         </div>
       </div>
-    </section>
-    <section id="section2">
-      <div class="control-group">
-        <div class="form-group">
-          <label for="total">Total</label>
-          <p class="form-control-static"><b>{{Total}}</b></p>
-        </div>
+      <div class="form-group">
+        <label for="cantidadEnt">Cantidad de Entradas</label>
+        <input type="number" class="form-control" id="cantidadEnt" [(ngModel)]="CantidadEnt" name="cantidadEnt" required>
       </div>
     </section>
-    <section id="section3">
+    <section>
+      <div class="form-group">
+        <label for="total">Total</label>
+        <p class="form-control-static"><b>{{Total}}</b></p>
+      </div>
+    </section>
+    <section>
       <h4>Acciones</h4>
       <div class="controls">
         <button type="submit" class="btn btn-success">Procesar</button>
