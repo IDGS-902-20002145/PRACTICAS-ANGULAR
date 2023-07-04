@@ -1,0 +1,58 @@
+.container {
+  margin-top: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-md-6 {
+  flex-basis: 48%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th:last-child,
+.table td:last-child {
+  text-align: center;
+}
+
+.total-ventas {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total-ventas .form-group {
+  margin-bottom: 0;
+}
+
+.total-ventas h3 {
+  margin: 0;
+}
+
+.total-ventas button {
+  margin-left: 10px;
+}
+

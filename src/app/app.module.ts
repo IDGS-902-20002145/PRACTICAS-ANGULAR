@@ -9,6 +9,7 @@ import {Distancia2pModule} from './distancia2p/distancia2p.module';
 import {ResistenciaModule} from './resistencia/resistencia.module';
 import {CinepolisModule} from './cinepolis/cinepolis.module';
 import { MenuComponent } from './menu/menu.component';
+import { PizzeriaModule } from './pizzeria/pizzeria.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MenuComponent } from './menu/menu.component';
     AppRoutingModule,
     ResistenciaModule,
     Distancia2pModule,
-    CinepolisModule
+    CinepolisModule,
+    PizzeriaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
